@@ -1,0 +1,14 @@
+CC = cc65
+CFLAGS = -I.
+DEPS = ringbuf.h
+OBJ = ringbuf.s rb_test.s
+
+%.s: %.c $(DEPS)
+	$(CC) -r -O -t c64 -o $@ $<
+
+rb_test.c64: $(OBJ)
+	cl65 -o $@ $^ $(CFLAGS)
+
+.PHONY: clean
+clean:
+	rm -f  *.s rb_test.c64
