@@ -16,7 +16,7 @@ int main() {
 
     printf("ringbuf_empty: %s\n",bool2str(ringbuf_empty(&rb)));
 
-    printf("ringbuf_push: %s\n",bool2str(ringbuf_push(&rb,53280)));
+    printf("ringbuf_push: %s\n",bool2str(ringbuf_push(&rb,1337)));
     printf("ringbuf_current_size 1: %s\n",bool2str(ringbuf_current_size(&rb) == 1));
     printf("ringbuf_maximum_size: %s\n",bool2str(ringbuf_maximum_size(&rb) == RINGBUF_BUF_SIZE-1));
 
@@ -31,7 +31,7 @@ int main() {
     printf("ringbuf_full: %s\n",bool2str(ringbuf_full(&rb)));
 
     // push to a full buffer must fail
-    printf("ringbuf_push: %s\n",bool2str(!ringbuf_push(&rb,64738)));
+    printf("ringbuf_push: %s\n",bool2str(!ringbuf_push(&rb,6502)));
 
     ok = 1;
     for (i = 0; i < (ringbuf_maximum_size(&rb) / 2); i++) {
