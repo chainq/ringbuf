@@ -4,7 +4,7 @@ To build it on Linux, use:
 ```
   make
 ```
-Then `./rd_test` launches the test simple code.
+Then `./rd_test` launches the simple test code.
 
 To build the Commodore 64 binary of the test code (for fun), use:
 ```
